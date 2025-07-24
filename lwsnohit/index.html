@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>이우성 마지막 안타로부터 지난 시간</title>
+        <title>이우성 마지막 안타·출루로부터 지난 시간</title>
         <script>
             const dday = new Date('2025-05-27T20:44:30');
 
@@ -14,12 +14,12 @@
                 const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
                 const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
                 const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+                const miseconds = String(diff % 1000).padStart(3, '0');
 
-                document.getElementById('counter').innerText =
-                    `${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+                document.getElementById('counter').innerText = `${days}일 ${hours}시간 ${minutes}분 ${seconds}.${miseconds}초`;
             }
 
-            setInterval(updateCounter, 1000); // 1초마다 갱신
+            setInterval(updateCounter, 20);
             window.onload = updateCounter;
         </script>
     </head>
@@ -42,16 +42,16 @@
             color: #555;
         }
         span {
-            font-size: xx-large;
+            font-size: xxx-large;
             color: #d30000;
         }
     </style>
     </style>
     <body>
         <img src="./nofan.jpg" width="400px"><br />
-        <p>이우성은 마지막 안타를 치고 나서<br />
+        <p>이우성의 마지막 안타와 출루로부터<br />
         <span id="counter"></span><br />
-        가 흐른 지금까지도 안타를 못 쳤습니다</p>
-        <small>※ 마지막 안타: 25. 5. 27.(화) 20:44</small>
+        가 지났습니다</p>
+        <small>※ 마지막 안타와 출루: 25. 5. 27.(화) 20:44</small>
     </body>
 </html>
