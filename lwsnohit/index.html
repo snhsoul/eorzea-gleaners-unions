@@ -19,7 +19,7 @@
                 document.getElementById('counter').innerText = `${days}일 ${hours}시간 ${minutes}분 ${seconds}.${miseconds}초`;
             }
 
-            setInterval(updateCounter, 20);
+            setInterval(updateCounter, 25);
             window.onload = updateCounter;
         </script>
     </head>
@@ -30,6 +30,7 @@
             font-weight: 700;
             font-style: normal;
         }
+        
         body {
             text-align: center;
             font-size: x-large;
@@ -41,13 +42,29 @@
             align-items: center;
             color: #555;
         }
+        
         span {
             font-size: xxx-large;
             color: #d30000;
         }
-    </style>
+        
+        .noti {
+            animation-duration: 1s; animation-name: Chookbae; animation-iteration-count: infinite;
+        }
+
+        @keyframes Chookbae {     
+            0% { color: #ff2a2a; }
+            15% { color: #ff7a2a; }
+            30% { color: #ffc52a; }
+            45% { color: #43ff2a; }
+            60% { color: #2a89ff; }
+            75% { color: #202082; }
+            90% { color: #6b2aff; } 
+            100% { color: #e82aff; }
+        }
     </style>
     <body>
+        <p class="noti">▶ 25. 7. 24.(목) 1군에서 말소되었습니다</p>
         <img src="./nofan.jpg" width="400px"><br />
         <p>이우성의 마지막 안타와 출루로부터<br />
         <span id="counter"></span><br />
