@@ -10,16 +10,16 @@
                 const now = new Date();
                 const diff = now - dday;
 
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                /* const days = Math.floor(diff / (1000 * 60 * 60 * 24));
                 const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
                 const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
                 const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
-                const miseconds = String(diff % 1000).padStart(3, '0');
+                const miseconds = String(diff % 1000).padStart(3, '0'); */
 
-                document.getElementById('counter').innerText = `${days}일 ${hours}시간 ${minutes}분 ${seconds}.${miseconds}초`;
+                document.getElementById('counter').innerText = `61일 19시간 43분 30.000초`;
             }
 
-            setInterval(updateCounter, 25);
+            // setInterval(updateCounter, 5000);
             window.onload = updateCounter;
         </script>
     </head>
@@ -64,11 +64,12 @@
         }
     </style>
     <body>
-        <p class="noti">▶ 25. 7. 24.(목) 1군에서 말소되었습니다</p>
-        <img src="./nofan.jpg" width="400px"><br />
+        <p>▶ 25. 7. 24.(목) 1군에서 말소되었습니다</p>
+        <!-- <img src="./nofan.jpg" width="400px"><br /> -->
         <p>이우성의 마지막 안타와 출루로부터<br />
         <span id="counter"></span><br />
         가 지났습니다</p>
         <small>※ 마지막 안타와 출루: 25. 5. 27.(화) 20:44</small>
+        <small>▶ 25. 7. 28.(월) 16:27 NC 다이노스 트레이드</small>
     </body>
 </html>
